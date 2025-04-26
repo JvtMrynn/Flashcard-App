@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:vm="clr-namespace:FlashcardApp.ViewModels"
+             x:Class="FlashcardApp.Views.FlashcardPage"
+             Title="Flashcards">
+
+    <ContentPage.BindingContext>
+        <vm:FlashcardPageViewModel />
+    </ContentPage.BindingContext>
+
+    <ScrollView>
+        <VerticalStackLayout Padding="20" Spacing="20" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+
+            <!-- Definition Prompt with Background Color -->
+            <Label Text="{Binding CurrentFlashcard.Definition}" 
+               FontSize="16"
+               FontAttributes="Bold"
+               HorizontalOptions="FillAndExpand"
+               Padding="10"
+               BackgroundColor="#E0F7FA"
+               TextColor="Black"
+               HeightRequest="60"
+               VerticalOptions="FillAndExpand"/>
+
+            <!-- Multiple Choice Buttons -->
+            <VerticalStackLayout Spacing="10" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+                <Button Text="{Binding CurrentFlashcard.ChoiceA}"
+                    Command="{Binding SelectAnswerCommand}" CommandParameter="A"
+                    BackgroundColor="#E0F7FA"
+                    CornerRadius="10"
+                    HeightRequest="50"
+                    TextColor="Black"
+                    HorizontalOptions="FillAndExpand" />
+
+                <Button Text="{Binding CurrentFlashcard.ChoiceB}"
+                    Command="{Binding SelectAnswerCommand}" CommandParameter="B"
+                    BackgroundColor="#E0F7FA"
+                    CornerRadius="10"
+                    HeightRequest="50"
+                    TextColor="Black"
+                    HorizontalOptions="FillAndExpand" />
+
+                <Button Text="{Binding CurrentFlashcard.ChoiceC}"
+                    Command="{Binding SelectAnswerCommand}" CommandParameter="C"
+                    BackgroundColor="#E0F7FA"
+                    CornerRadius="10"
+                    HeightRequest="50"
+                    TextColor="Black"
+                    HorizontalOptions="FillAndExpand" />
+
+                <Button Text="{Binding CurrentFlashcard.ChoiceD}"
+                    Command="{Binding SelectAnswerCommand}" CommandParameter="D"
+                    BackgroundColor="#E0F7FA"
+                    CornerRadius="10"
+                    HeightRequest="50"
+                    TextColor="Black"
+                    HorizontalOptions="FillAndExpand" />
+            </VerticalStackLayout>
+
+            <!-- Progress Indicator -->
+            <Label Text="{Binding ProgressText}" 
+               FontSize="16" 
+               HorizontalOptions="CenterAndExpand"
+               VerticalOptions="Center" />
+
+            <!-- Navigation Buttons (horizontal) with only arrows -->
+            <HorizontalStackLayout Spacing="30" HorizontalOptions="CenterAndExpand" Padding="0,20,0,0">
+                <Button Text="⬅️" 
+                    Command="{Binding PreviousCommand}" 
+                    BackgroundColor="#EEEEEE"
+                    TextColor="Black"
+                    WidthRequest="50"
+                    HeightRequest="50"
+                    CornerRadius="25" 
+                    HorizontalOptions="FillAndExpand"/>
+
+                <Button Text="➡️" 
+                    Command="{Binding NextCommand}" 
+                    BackgroundColor="#EEEEEE"
+                    TextColor="Black"
+                    WidthRequest="50"
+                    HeightRequest="50"
+                    CornerRadius="25"
+                    HorizontalOptions="FillAndExpand"/>
+            </HorizontalStackLayout>
+
+            <!-- Quick Actions (vertical) -->
+            <VerticalStackLayout Spacing="20" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+                <Button Text="➕ Add New Flashcard" 
+                    Command="{Binding AddCommand}" 
+                    BackgroundColor="#D1C4E9"
+                    TextColor="Black"
+                    CornerRadius="10"
+                    HorizontalOptions="FillAndExpand" />
+
+                <Button Text="✏️ Edit" 
+                    Command="{Binding EditCommand}" 
+                    BackgroundColor="#FFF9C4"
+                    TextColor="Black"
+                    CornerRadius="10"
+                    HorizontalOptions="FillAndExpand" />
+
+                <Button Text="🗑️ Delete" 
+                    Command="{Binding DeleteCommand}" 
+                    BackgroundColor="#FFCDD2"
+                    TextColor="Black"
+                    CornerRadius="10"
+                    HorizontalOptions="FillAndExpand" />
+            </VerticalStackLayout>
+
+            <!-- Back to Subjects Button -->
+            <Button Text="📚 Go to Subjects" 
+                Command="{Binding GoToSubjectsCommand}"
+                BackgroundColor="LightGray"
+                TextColor="Black"
+                Margin="0,10,0,0"
+                CornerRadius="10"
+                HorizontalOptions="FillAndExpand" />
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>

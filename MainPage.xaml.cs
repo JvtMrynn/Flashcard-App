@@ -4,13 +4,11 @@ namespace FlashcardApp
 {
     public partial class MainPage : ContentPage
     {
-        int count = 0;
-
-        private MainViewModel _viewModel;
+        private MainPageViewModel _viewModel;
         public MainPage()
         {
             InitializeComponent();
-            _viewModel = new MainViewModel();
+            _viewModel = new MainPageViewModel();
             _viewModel.ShowAlert = async (title, message, cancel) =>
             {
                 await DisplayAlert(title, message, cancel);
@@ -19,20 +17,16 @@ namespace FlashcardApp
             BindingContext = _viewModel;
         }
 
-        private void OnCounterClicked(object sender, EventArgs e)
+        protected override void OnAppearing()
         {
-            count++;
+            base.OnAppearing();
 
-            if (count == 1)
-                CounterBtn.Text = $"Clicked {count} time";
-            else
-                CounterBtn.Text = $"Clicked {count} times";
-
-            SemanticScreenReader.Announce(CounterBtn.Text);
+            if (BindingContext is MainPageViewModel vm)
+            {
+                vm.ReloadSubjects();
+            }
         }
-
-        
-        
     }
+
 
 }

@@ -21,5 +21,19 @@
     <FlyoutItem x:Name="MainPageFlyoutItem" Route="main" Title="Dashboard">
         <ShellContent Route="MainPage" ContentTemplate="{DataTemplate local:MainPage}" />
     </FlyoutItem>
+    
+    <!-- Subject Pages -->
+    <FlyoutItem x:Name="SubjectFlyoutItem" Route="subject" Title="Subject">
+        <ShellContent Route="SubjectPage" ContentTemplate="{DataTemplate views:SubjectPage}"/>
+    </FlyoutItem>
+
+    <ShellContent Title="Edit Subject" Route="SubjectEditorPage" ContentTemplate="{DataTemplate views:SubjectEditorPage}"/>
+
+    <!-- Flashcard Pages -->
+    <FlyoutItem x:Name="FlashcardFlyoutItem" Route="flashcard" Title="Flashcard">
+        <ShellContent Route="FlashcardPage" ContentTemplate="{DataTemplate views:FlashcardPage}"/>
+    </FlyoutItem>
+
+    <ShellContent Title="Edit Flashcard" Route="FlashcardEditorPage" ContentTemplate="{DataTemplate views:FlashcardEditorPage}"/>
 
 </Shell>

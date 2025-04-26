@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:vm="clr-namespace:FlashcardApp.ViewModels"
+             x:Class="FlashcardApp.Views.FlashcardEditorPage"
+             Title="Add/Edit Flashcard" >
+
+    <ScrollView>
+        <VerticalStackLayout Padding="20" Spacing="20">
+
+            <!-- Definition Field -->
+            <Entry Text="{Binding Definition}" 
+                   Placeholder="Enter definition/question" 
+                   FontSize="16" 
+                   HeightRequest="50"
+                   Margin="0,0,0,10"/>
+
+            <!-- Choices Section -->
+            <Label Text="Choices:" FontAttributes="Bold" FontSize="18" />
+
+            <Entry Text="{Binding ChoiceA}" Placeholder="Choice A" FontSize="16" HeightRequest="50" Margin="0,5"/>
+            <Entry Text="{Binding ChoiceB}" Placeholder="Choice B" FontSize="16" HeightRequest="50" Margin="0,5"/>
+            <Entry Text="{Binding ChoiceC}" Placeholder="Choice C" FontSize="16" HeightRequest="50" Margin="0,5"/>
+            <Entry Text="{Binding ChoiceD}" Placeholder="Choice D" FontSize="16" HeightRequest="50" Margin="0,5"/>
+
+            <!-- Select Correct Answer -->
+            <Label Text="Tap to set the correct answer:" FontAttributes="Bold" FontSize="18" Margin="0,20,0,10" />
+
+            <!-- 2x2 Grid for Correct Answer Buttons -->
+            <VerticalStackLayout Spacing="20" HorizontalOptions="FillAndExpand">
+                <Button Text="Set Choice A as Correct" Command="{Binding SetCorrectAnswerCommand}" CommandParameter="A" BackgroundColor="#81C784" TextColor="White" CornerRadius="10" HorizontalOptions="FillAndExpand"/>
+                <Button Text="Set Choice B as Correct" Command="{Binding SetCorrectAnswerCommand}" CommandParameter="B" BackgroundColor="#81C784" TextColor="White" CornerRadius="10" HorizontalOptions="FillAndExpand"/>
+                <Button Text="Set Choice C as Correct" Command="{Binding SetCorrectAnswerCommand}" CommandParameter="C" BackgroundColor="#81C784" TextColor="White" CornerRadius="10" HorizontalOptions="FillAndExpand"/>
+                <Button Text="Set Choice D as Correct" Command="{Binding SetCorrectAnswerCommand}" CommandParameter="D" BackgroundColor="#81C784" TextColor="White" CornerRadius="10" HorizontalOptions="FillAndExpand"/>
+            </VerticalStackLayout>
+
+                <!-- Selected Correct Answer -->
+            <Label Text="Selected Correct Answer:" FontAttributes="Bold" FontSize="18" Margin="0,20,0,5" />
+            <Label Text="{Binding CorrectAnswer}" FontSize="16" />
+
+            <!-- Save and Cancel Buttons -->
+            <HorizontalStackLayout Spacing="15" HorizontalOptions="Center">
+                <Button 
+                    Text="💾"
+                    Command="{Binding SaveCommand}"
+                    BackgroundColor="#4CAF50"
+                    TextColor="White"
+                    FontAttributes="Bold"
+                    CornerRadius="25"
+                    WidthRequest="50"
+                    HeightRequest="50" />
+
+                <Button 
+                    Text="❌"
+                    Command="{Binding CancelCommand}"
+                    BackgroundColor="LightGray"
+                    TextColor="Black"
+                    FontAttributes="Bold"
+                    CornerRadius="25"
+                    WidthRequest="50"
+                    HeightRequest="50" />
+            </HorizontalStackLayout>
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

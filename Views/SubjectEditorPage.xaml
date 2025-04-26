@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:vm="clr-namespace:FlashcardApp.ViewModels"
+             x:Class="FlashcardApp.Views.SubjectEditorPage"
+             Title="{Binding IsEditMode, Converter={StaticResource BoolToTitleConverter}}">
+
+    <ContentPage.BindingContext>
+        <vm:SubjectEditorPageViewModel />
+    </ContentPage.BindingContext>
+
+    <ScrollView>
+        <VerticalStackLayout Padding="20" Spacing="20">
+
+            <Label Text="Subject Details" 
+                   FontSize="24" 
+                   FontAttributes="Bold" 
+                   HorizontalOptions="Center" />
+
+            <VerticalStackLayout Spacing="10">
+
+                <!-- Subject Name -->
+                <Label Text="Subject Name" FontAttributes="Bold" />
+                <Entry 
+                    Text="{Binding Name}" 
+                    Placeholder="Enter subject name"
+                    HeightRequest="45" />
+
+                <!-- Description -->
+                <Label Text="Description" FontAttributes="Bold" />
+                <Editor 
+                    Text="{Binding Description}" 
+                    Placeholder="Optional description"
+                    AutoSize="TextChanges"
+                    HeightRequest="100" />
+
+                <!-- Color Tag -->
+                <Label Text="Color Tag" FontAttributes="Bold" />
+                <Entry 
+                    Text="{Binding ColorTag}" 
+                    Placeholder="e.g., #FFAA00 or Blue"
+                    HeightRequest="45" />
+            </VerticalStackLayout>
+
+            <!-- Save / Cancel Buttons -->
+            <HorizontalStackLayout Spacing="15" HorizontalOptions="Center">
+                <Button 
+                    Text="💾"
+                    Command="{Binding SaveCommand}"
+                    BackgroundColor="#4CAF50"
+                    TextColor="White"
+                    FontAttributes="Bold"
+                    CornerRadius="25"
+                    WidthRequest="50"
+                    HeightRequest="50" />
+
+                <Button 
+                    Text="❌"
+                    Command="{Binding CancelCommand}"
+                    BackgroundColor="LightGray"
+                    TextColor="Black"
+                    FontAttributes="Bold"
+                    CornerRadius="25"
+                    WidthRequest="50"
+                    HeightRequest="50" />
+            </HorizontalStackLayout>
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

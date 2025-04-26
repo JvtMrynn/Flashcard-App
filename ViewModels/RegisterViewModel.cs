@@ -50,7 +50,7 @@ namespace FlashcardApp.ViewModels
         public RegisterViewModel()
         {
             RegisterCommand = new Command(async () => await Register(), () => !IsBusy);
-            GoToLoginCommand = new Command(async () => await Shell.Current.GoToAsync("//LoginPage"));
+            GoToLoginCommand = new Command(async () => await Shell.Current.GoToAsync("LoginPage"));
         }
 
         private async Task Register()

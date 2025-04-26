@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:vm="clr-namespace:FlashcardApp.ViewModels"
+             x:Class="FlashcardApp.Views.SubjectPage"
+             Title="Subjects" >
+
+    <ContentPage.BindingContext>
+        <vm:SubjectPageViewModel />
+    </ContentPage.BindingContext>
+
+    <VerticalStackLayout Padding="20" Spacing="15">
+
+        <VerticalStackLayout Spacing="10">
+            <!-- Search bar stays on top -->
+            <SearchBar 
+                Placeholder="Search subjects..." 
+                Text="{Binding SearchText}" 
+                FontSize="14"
+                HorizontalOptions="FillAndExpand" />
+
+            <!-- Add New Subject Button (full width, clear text) -->
+            <Button 
+                Text="➕ Add New Subject" 
+                Command="{Binding AddCommand}"
+                BackgroundColor="#4CAF50"
+                TextColor="White"
+                FontAttributes="Bold"
+                CornerRadius="10"
+                HeightRequest="50"
+                HorizontalOptions="FillAndExpand" />
+        </VerticalStackLayout>
+
+
+
+        <!-- Subject List -->
+        <CollectionView 
+            ItemsSource="{Binding Subjects}" 
+            SelectionMode="None">
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <Border Padding="15"
+                            StrokeShape="RoundRectangle 10"
+                            Stroke="Gray"
+                            BackgroundColor="{Binding ColorTag}"
+                            Margin="5" >
+
+                        <Border.GestureRecognizers>
+                            <TapGestureRecognizer 
+                                Command="{Binding Source={RelativeSource AncestorType={x:Type vm:SubjectPageViewModel}}, Path=TapSubjectCommand}"
+                                CommandParameter="{Binding .}" />
+                        </Border.GestureRecognizers>
+
+                        <Grid ColumnDefinitions="*,Auto,Auto" RowDefinitions="Auto" ColumnSpacing="10">
+                            <VerticalStackLayout Grid.Column="0" Spacing="2">
+                                <Label 
+                                    Text="{Binding Name}" 
+                                    FontSize="18" 
+                                    FontAttributes="Bold" />
+
+                                <Label 
+                                    Text="{Binding Description}" 
+                                    FontSize="14" 
+                                    TextColor="Gray"/>
+                            </VerticalStackLayout>
+
+                            <Button 
+                                Text="✏️"
+                                Grid.Column="1"
+                                Command="{Binding Source={RelativeSource AncestorType={x:Type vm:SubjectPageViewModel}}, Path=EditCommand}"
+                                CommandParameter="{Binding .}"
+                                BackgroundColor="Transparent"/>
+
+                            <Button 
+                                Text="🗑️"
+                                Grid.Column="2"
+                                Command="{Binding Source={RelativeSource AncestorType={x:Type vm:SubjectPageViewModel}}, Path=DeleteCommand}"
+                                CommandParameter="{Binding .}"
+                                BackgroundColor="Transparent"/>
+                        </Grid>
+
+                    </Border>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+
+        <!-- Dashboard Button -->
+        <Button 
+            Text="🏠 Go to Dashboard"
+            Command="{Binding GoToDashboardCommand}"
+            BackgroundColor="#2196F3"
+            TextColor="White"
+            CornerRadius="10"
+            HeightRequest="50"
+            Margin="0,20,0,0" />
+
+    </VerticalStackLayout>
+</ContentPage>

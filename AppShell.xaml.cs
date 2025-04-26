@@ -10,7 +10,10 @@
             Routing.RegisterRoute("LoginPage", typeof(Views.LoginPage));
             Routing.RegisterRoute("RegisterPage", typeof(Views.RegisterPage));
             Routing.RegisterRoute("MainPage", typeof(MainPage));
-            //Routing.RegisterRoute("FlashcardPage", typeof(Views.FlashcardPage));
+            Routing.RegisterRoute("SubjectPage", typeof(Views.SubjectPage));
+            Routing.RegisterRoute("SubjectEditorPage", typeof(Views.SubjectEditorPage));
+            Routing.RegisterRoute("FlashcardPage", typeof(Views.FlashcardPage));
+            Routing.RegisterRoute("FlashcardEditorPage", typeof(Views.FlashcardEditorPage));
 
             HideMainContent();
 

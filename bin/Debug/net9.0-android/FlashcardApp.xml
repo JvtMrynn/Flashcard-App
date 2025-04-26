@@ -1,0 +1,226 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>FlashcardApp</name>
+    </assembly>
+    <members>
+        <member name="T:FlashcardApp.ViewModels.FlashcardEditorPageViewModel">
+            <inheritdoc/>
+        </member>
+        <member name="P:FlashcardApp.ViewModels.FlashcardEditorPageViewModel.Definition">
+            <inheritdoc cref="F:FlashcardApp.ViewModels.FlashcardEditorPageViewModel.definition"/>
+        </member>
+        <member name="P:FlashcardApp.ViewModels.FlashcardEditorPageViewModel.ChoiceA">
+            <inheritdoc cref="F:FlashcardApp.ViewModels.FlashcardEditorPageViewModel.choiceA"/>
+        </member>
+        <member name="P:FlashcardApp.ViewModels.FlashcardEditorPageViewModel.ChoiceB">
+            <inheritdoc cref="F:FlashcardApp.ViewModels.FlashcardEditorPageViewModel.choiceB"/>
+        </member>
+        <member name="P:FlashcardApp.ViewModels.FlashcardEditorPageViewModel.ChoiceC">
+            <inheritdoc cref="F:FlashcardApp.ViewModels.FlashcardEditorPageViewModel.choiceC"/>
+        </member>
+        <member name="P:FlashcardApp.ViewModels.FlashcardEditorPageViewModel.ChoiceD">
+            <inheritdoc cref="F:FlashcardApp.ViewModels.FlashcardEditorPageViewModel.choiceD"/>
+        </member>
+        <member name="P:FlashcardApp.ViewModels.FlashcardEditorPageViewModel.CorrectAnswer">
+            <inheritdoc cref="F:FlashcardApp.ViewModels.FlashcardEditorPageViewModel.correctAnswer"/>
+        </member>
+        <member name="P:FlashcardApp.ViewModels.FlashcardEditorPageViewModel.SubjectId">
+            <inheritdoc cref="F:FlashcardApp.ViewModels.FlashcardEditorPageViewModel.subjectId"/>
+        </member>
+        <member name="P:FlashcardApp.ViewModels.FlashcardEditorPageViewModel.FlashcardId">
+            <inheritdoc cref="F:FlashcardApp.ViewModels.FlashcardEditorPageViewModel.flashcardId"/>
+        </member>
+        <member name="P:FlashcardApp.ViewModels.FlashcardEditorPageViewModel.IsEditMode">
+            <inheritdoc cref="F:FlashcardApp.ViewModels.FlashcardEditorPageViewModel.isEditMode"/>
+        </member>
+        <member name="M:FlashcardApp.ViewModels.FlashcardEditorPageViewModel.OnSubjectIdChanged(System.Int32)">
+            <summary>Executes the logic for when <see cref="P:FlashcardApp.ViewModels.FlashcardEditorPageViewModel.SubjectId"/> just changed.</summary>
+            <param name="value">The new property value that was set.</param>
+            <remarks>This method is invoked right after the value of <see cref="P:FlashcardApp.ViewModels.FlashcardEditorPageViewModel.SubjectId"/> is changed.</remarks>
+        </member>
+        <member name="M:FlashcardApp.ViewModels.FlashcardEditorPageViewModel.OnFlashcardIdChanged(System.Int32)">
+            <summary>Executes the logic for when <see cref="P:FlashcardApp.ViewModels.FlashcardEditorPageViewModel.FlashcardId"/> just changed.</summary>
+            <param name="value">The new property value that was set.</param>
+            <remarks>This method is invoked right after the value of <see cref="P:FlashcardApp.ViewModels.FlashcardEditorPageViewModel.FlashcardId"/> is changed.</remarks>
+        </member>
+        <member name="T:FlashcardApp.ViewModels.FlashcardPageViewModel">
+            <inheritdoc/>
+        </member>
+        <member name="P:FlashcardApp.ViewModels.FlashcardPageViewModel.Flashcards">
+            <inheritdoc cref="F:FlashcardApp.ViewModels.FlashcardPageViewModel.flashcards"/>
+        </member>
+        <member name="P:FlashcardApp.ViewModels.FlashcardPageViewModel.CurrentFlashcard">
+            <inheritdoc cref="F:FlashcardApp.ViewModels.FlashcardPageViewModel.currentFlashcard"/>
+        </member>
+        <member name="P:FlashcardApp.ViewModels.FlashcardPageViewModel.SubjectId">
+            <inheritdoc cref="F:FlashcardApp.ViewModels.FlashcardPageViewModel.subjectId"/>
+        </member>
+        <member name="P:FlashcardApp.ViewModels.FlashcardPageViewModel.CurrentIndex">
+            <inheritdoc cref="F:FlashcardApp.ViewModels.FlashcardPageViewModel.currentIndex"/>
+        </member>
+        <member name="P:FlashcardApp.ViewModels.FlashcardPageViewModel.IsShuffled">
+            <inheritdoc cref="F:FlashcardApp.ViewModels.FlashcardPageViewModel.isShuffled"/>
+        </member>
+        <member name="P:FlashcardApp.ViewModels.FlashcardPageViewModel.ProgressText">
+            <inheritdoc cref="F:FlashcardApp.ViewModels.FlashcardPageViewModel.progressText"/>
+        </member>
+        <member name="P:FlashcardApp.ViewModels.FlashcardPageViewModel.LearnedButtonText">
+            <inheritdoc cref="F:FlashcardApp.ViewModels.FlashcardPageViewModel.learnedButtonText"/>
+        </member>
+        <member name="M:FlashcardApp.ViewModels.FlashcardPageViewModel.OnSubjectIdChanged(System.Int32)">
+            <summary>Executes the logic for when <see cref="P:FlashcardApp.ViewModels.FlashcardPageViewModel.SubjectId"/> just changed.</summary>
+            <param name="value">The new property value that was set.</param>
+            <remarks>This method is invoked right after the value of <see cref="P:FlashcardApp.ViewModels.FlashcardPageViewModel.SubjectId"/> is changed.</remarks>
+        </member>
+        <member name="T:FlashcardApp.ViewModels.SubjectEditorPageViewModel">
+            <inheritdoc/>
+        </member>
+        <member name="P:FlashcardApp.ViewModels.SubjectEditorPageViewModel.Name">
+            <inheritdoc cref="F:FlashcardApp.ViewModels.SubjectEditorPageViewModel.name"/>
+        </member>
+        <member name="P:FlashcardApp.ViewModels.SubjectEditorPageViewModel.Description">
+            <inheritdoc cref="F:FlashcardApp.ViewModels.SubjectEditorPageViewModel.description"/>
+        </member>
+        <member name="P:FlashcardApp.ViewModels.SubjectEditorPageViewModel.ColorTag">
+            <inheritdoc cref="F:FlashcardApp.ViewModels.SubjectEditorPageViewModel.colorTag"/>
+        </member>
+        <member name="P:FlashcardApp.ViewModels.SubjectEditorPageViewModel.SubjectId">
+            <inheritdoc cref="F:FlashcardApp.ViewModels.SubjectEditorPageViewModel.subjectId"/>
+        </member>
+        <member name="P:FlashcardApp.ViewModels.SubjectEditorPageViewModel.IsEditMode">
+            <inheritdoc cref="F:FlashcardApp.ViewModels.SubjectEditorPageViewModel.isEditMode"/>
+        </member>
+        <member name="M:FlashcardApp.ViewModels.SubjectEditorPageViewModel.OnSubjectIdChanged(System.Int32)">
+            <summary>Executes the logic for when <see cref="P:FlashcardApp.ViewModels.SubjectEditorPageViewModel.SubjectId"/> just changed.</summary>
+            <param name="value">The new property value that was set.</param>
+            <remarks>This method is invoked right after the value of <see cref="P:FlashcardApp.ViewModels.SubjectEditorPageViewModel.SubjectId"/> is changed.</remarks>
+        </member>
+        <member name="T:FlashcardApp.Resource">
+            <summary>
+            Android Resource Designer class.
+            Exposes the Android Resource designer assembly into the project Namespace.
+            </summary>
+        </member>
+        <member name="T:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs">
+            <summary>
+            A helper type providing cached, reusable <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instances
+            for all properties generated with <see cref="T:CommunityToolkit.Mvvm.ComponentModel.ObservablePropertyAttribute"/>.
+            </summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Definition">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Definition" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.ChoiceA">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "ChoiceA" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.ChoiceB">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "ChoiceB" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.ChoiceC">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "ChoiceC" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.ChoiceD">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "ChoiceD" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.CorrectAnswer">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "CorrectAnswer" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.SubjectId">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "SubjectId" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.FlashcardId">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "FlashcardId" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.IsEditMode">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "IsEditMode" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Flashcards">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Flashcards" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.CurrentFlashcard">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "CurrentFlashcard" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.CurrentIndex">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "CurrentIndex" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.IsShuffled">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "IsShuffled" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.ProgressText">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "ProgressText" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.LearnedButtonText">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "LearnedButtonText" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Name">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Name" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Description">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Description" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.ColorTag">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "ColorTag" generated properties.</summary>
+        </member>
+        <member name="T:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs">
+            <summary>
+            A helper type providing cached, reusable <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instances
+            for all properties generated with <see cref="T:CommunityToolkit.Mvvm.ComponentModel.ObservablePropertyAttribute"/>.
+            </summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Definition">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Definition" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.ChoiceA">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "ChoiceA" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.ChoiceB">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "ChoiceB" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.ChoiceC">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "ChoiceC" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.ChoiceD">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "ChoiceD" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.CorrectAnswer">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "CorrectAnswer" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.SubjectId">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "SubjectId" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.FlashcardId">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "FlashcardId" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.IsEditMode">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "IsEditMode" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Flashcards">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Flashcards" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.CurrentFlashcard">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "CurrentFlashcard" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.CurrentIndex">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "CurrentIndex" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.IsShuffled">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "IsShuffled" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.ProgressText">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "ProgressText" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.LearnedButtonText">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "LearnedButtonText" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Name">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Name" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Description">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Description" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.ColorTag">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "ColorTag" generated properties.</summary>
+        </member>
+    </members>
+</doc>
