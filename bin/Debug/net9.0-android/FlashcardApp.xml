@@ -65,6 +65,12 @@
         <member name="P:FlashcardApp.ViewModels.FlashcardPageViewModel.ProgressText">
             <inheritdoc cref="F:FlashcardApp.ViewModels.FlashcardPageViewModel.progressText"/>
         </member>
+        <member name="P:FlashcardApp.ViewModels.FlashcardPageViewModel.Score">
+            <inheritdoc cref="F:FlashcardApp.ViewModels.FlashcardPageViewModel.score"/>
+        </member>
+        <member name="P:FlashcardApp.ViewModels.FlashcardPageViewModel.TotalFlashcards">
+            <inheritdoc cref="F:FlashcardApp.ViewModels.FlashcardPageViewModel.totalFlashcards"/>
+        </member>
         <member name="P:FlashcardApp.ViewModels.FlashcardPageViewModel.LearnedButtonText">
             <inheritdoc cref="F:FlashcardApp.ViewModels.FlashcardPageViewModel.learnedButtonText"/>
         </member>
@@ -150,6 +156,12 @@
         <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.ProgressText">
             <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "ProgressText" generated properties.</summary>
         </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Score">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Score" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.TotalFlashcards">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "TotalFlashcards" generated properties.</summary>
+        </member>
         <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.LearnedButtonText">
             <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "LearnedButtonText" generated properties.</summary>
         </member>
@@ -209,6 +221,12 @@
         </member>
         <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.ProgressText">
             <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "ProgressText" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Score">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Score" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.TotalFlashcards">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "TotalFlashcards" generated properties.</summary>
         </member>
         <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.LearnedButtonText">
             <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "LearnedButtonText" generated properties.</summary>

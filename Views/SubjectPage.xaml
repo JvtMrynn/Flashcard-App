@@ -9,6 +9,7 @@
         <vm:SubjectPageViewModel />
     </ContentPage.BindingContext>
 
+    <ScrollView>
     <VerticalStackLayout Padding="20" Spacing="15">
 
         <VerticalStackLayout Spacing="10">
@@ -95,4 +96,5 @@
             Margin="0,20,0,0" />
 
     </VerticalStackLayout>
+    </ScrollView>
 </ContentPage>

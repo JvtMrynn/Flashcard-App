@@ -36,6 +36,8 @@ namespace FlashcardApp.ViewModels
 
             LoadSubjects();
 
+            MessagingCenter.Subscribe<SubjectEditorPageViewModel>(this, "ReloadSubjects", (sender) => LoadSubjects());
+
             LogoutCommand = new Command(async () => await Logout());
         }
 

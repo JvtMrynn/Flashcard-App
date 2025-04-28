@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+  <metadata>
+    <id>FlashcardApp</id>
+    <version>1.0.0</version>
+    <authors>FlashcardApp</authors>
+    <description>Package Description</description>
+    <repository type="git" commit="9e0e7304a17ef21fbe9a2f6a9c4505572e751400" />
+    <dependencies>
+      <group targetFramework="net9.0-android35.0">
+        <dependency id="CommunityToolkit.Mvvm" version="8.4.0" exclude="Build,Analyzers" />
+        <dependency id="Microsoft.Extensions.Logging.Debug" version="9.0.0" exclude="Build,Analyzers" />
+        <dependency id="Microsoft.Maui.Controls" version="9.0.14" exclude="Build,Analyzers" />
+        <dependency id="sqlite-net-pcl" version="1.9.172" exclude="Build,Analyzers" />
+      </group>
+      <group targetFramework="net9.0-ios18.1">
+        <dependency id="CommunityToolkit.Mvvm" version="8.4.0" exclude="Build,Analyzers" />
+        <dependency id="Microsoft.Extensions.Logging.Debug" version="9.0.0" exclude="Build,Analyzers" />
+        <dependency id="Microsoft.Maui.Controls" version="9.0.14" exclude="Build,Analyzers" />
+        <dependency id="sqlite-net-pcl" version="1.9.172" exclude="Build,Analyzers" />
+      </group>
+      <group targetFramework="net9.0-maccatalyst18.1">
+        <dependency id="CommunityToolkit.Mvvm" version="8.4.0" exclude="Build,Analyzers" />
+        <dependency id="Microsoft.Extensions.Logging.Debug" version="9.0.0" exclude="Build,Analyzers" />
+        <dependency id="Microsoft.Maui.Controls" version="9.0.14" exclude="Build,Analyzers" />
+        <dependency id="sqlite-net-pcl" version="1.9.172" exclude="Build,Analyzers" />
+      </group>
+      <group targetFramework="net9.0-windows10.0.19041">
+        <dependency id="CommunityToolkit.Mvvm" version="8.4.0" exclude="Build,Analyzers" />
+        <dependency id="Microsoft.Extensions.Logging.Debug" version="9.0.0" exclude="Build,Analyzers" />
+        <dependency id="Microsoft.Maui.Controls" version="9.0.14" exclude="Build,Analyzers" />
+        <dependency id="sqlite-net-pcl" version="1.9.172" exclude="Build,Analyzers" />
+      </group>
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="C:\Users\Jovet\source\repos\FlashcardApp\bin\Debug\net9.0-android\FlashcardApp.runtimeconfig.json" target="lib\net9.0-android35.0\FlashcardApp.runtimeconfig.json" />
+    <file src="C:\Users\Jovet\source\repos\FlashcardApp\bin\Debug\net9.0-android\FlashcardApp.dll" target="lib\net9.0-android35.0\FlashcardApp.dll" />
+    <file src="C:\Users\Jovet\source\repos\FlashcardApp\bin\Debug\net9.0-android\FlashcardApp.xml" target="lib\net9.0-android35.0\FlashcardApp.xml" />
+    <file src="C:\Users\Jovet\source\repos\FlashcardApp\bin\Debug\net9.0-ios\iossimulator-x64\FlashcardApp.runtimeconfig.json" target="lib\net9.0-ios18.1\FlashcardApp.runtimeconfig.json" />
+    <file src="C:\Users\Jovet\source\repos\FlashcardApp\bin\Debug\net9.0-ios\iossimulator-x64\FlashcardApp.dll" target="lib\net9.0-ios18.1\FlashcardApp.dll" />
+    <file src="C:\Users\Jovet\source\repos\FlashcardApp\bin\Debug\net9.0-maccatalyst\maccatalyst-x64\FlashcardApp.runtimeconfig.json" target="lib\net9.0-maccatalyst18.1\FlashcardApp.runtimeconfig.json" />
+    <file src="C:\Users\Jovet\source\repos\FlashcardApp\bin\Debug\net9.0-maccatalyst\maccatalyst-x64\FlashcardApp.dll" target="lib\net9.0-maccatalyst18.1\FlashcardApp.dll" />
+    <file src="C:\Users\Jovet\source\repos\FlashcardApp\bin\Debug\net9.0-windows10.0.19041.0\win10-x64\FlashcardApp.runtimeconfig.json" target="lib\net9.0-windows10.0.19041\FlashcardApp.runtimeconfig.json" />
+    <file src="C:\Users\Jovet\source\repos\FlashcardApp\bin\Debug\net9.0-windows10.0.19041.0\win10-x64\FlashcardApp.dll" target="lib\net9.0-windows10.0.19041\FlashcardApp.dll" />
+    <file src="C:\Users\Jovet\source\repos\FlashcardApp\bin\Debug\net9.0-windows10.0.19041.0\win10-x64\resources.pri" target="lib\net9.0-windows10.0.19041\resources.pri" />
+  </files>
+</package>

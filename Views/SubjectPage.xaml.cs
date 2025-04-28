@@ -11,14 +11,14 @@ public partial class SubjectPage : ContentPage
         BindingContext = new SubjectPageViewModel();
 	}
 
-    protected override void OnAppearing()
-    {
-        base.OnAppearing();
+    //protected override void OnAppearing()
+    //{
+    //    base.OnAppearing();
 
-        if (BindingContext is SubjectPageViewModel vm)
-        {
-            vm.ReloadSubjects();
-        }
-    }
+    //    if (BindingContext is SubjectPageViewModel vm)
+    //    {
+    //        vm.ReloadSubjects();
+    //    }
+    //}
 
 }

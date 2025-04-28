@@ -22,6 +22,8 @@ namespace FlashcardApp.ViewModels
         [ObservableProperty] private int currentIndex;
         [ObservableProperty] private bool isShuffled;
         [ObservableProperty] private string progressText;
+        [ObservableProperty] private int score = 0;
+        [ObservableProperty] private int totalFlashcards;
         [ObservableProperty] private string learnedButtonText = "Mark as Learned";
 
         public ICommand NextCommand { get; }
@@ -65,6 +67,8 @@ namespace FlashcardApp.ViewModels
             var cards = await _flashcardService.GetFlashcardsBySubjectIdAsync(SubjectId);
             Flashcards = cards.ToList();
             CurrentIndex = 0;  // Use the property instead of the field
+            Score = 0; // reset score
+            TotalFlashcards = Flashcards.Count;
             UpdateCurrentCard();
         }
 
@@ -123,7 +127,7 @@ namespace FlashcardApp.ViewModels
             UpdateCurrentCard();
         }
 
-        private void SelectAnswer(string choiceLetter)
+        private async void SelectAnswer(string choiceLetter)
         {
             if (CurrentFlashcard == null)
                 return;
@@ -142,10 +146,30 @@ namespace FlashcardApp.ViewModels
 
             bool isCorrect = selectedAnswer == CurrentFlashcard.CorrectAnswer;
 
+            if (isCorrect)
+                score++;
+
             Application.Current.MainPage.DisplayAlert(
                 isCorrect ? "Correct!" : "Incorrect!",
                 isCorrect ? "You chose the correct answer." : $"Correct Answer: {CurrentFlashcard.CorrectAnswer}",
                 "OK");
+
+            CurrentIndex++;
+
+            if (CurrentIndex < Flashcards.Count)
+            {
+                UpdateCurrentCard();
+            }
+            else
+            {
+                // No more flashcards, show the final score
+                await Application.Current.MainPage.DisplayAlert(
+                    "Quiz Completed",
+                    $"You scored {Score} out of {Flashcards.Count}!",
+                    "OK");
+
+                await Shell.Current.GoToAsync("///SubjectPage"); // Go back to Dashboard or wherever you want
+            }
         }
 
         private void ToggleLearned()

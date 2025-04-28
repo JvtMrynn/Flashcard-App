@@ -48,6 +48,8 @@ namespace FlashcardApp.ViewModels
             GoToDashboardCommand = new Command(async () => await GoToDashboard());
 
             LoadSubjects();
+
+            MessagingCenter.Subscribe<SubjectEditorPageViewModel>(this, "ReloadSubjects", (sender) => LoadSubjects());
         }
 
         public async void ReloadSubjects()

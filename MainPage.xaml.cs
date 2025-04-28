@@ -17,15 +17,15 @@ namespace FlashcardApp
             BindingContext = _viewModel;
         }
 
-        protected override void OnAppearing()
-        {
-            base.OnAppearing();
+        //protected override void OnAppearing()
+        //{
+        //    base.OnAppearing();
 
-            if (BindingContext is MainPageViewModel vm)
-            {
-                vm.ReloadSubjects();
-            }
-        }
+        //    if (BindingContext is MainPageViewModel vm)
+        //    {
+        //        vm.ReloadSubjects();
+        //    }
+        //}
     }
 
 

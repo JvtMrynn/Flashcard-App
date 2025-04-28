@@ -81,6 +81,9 @@ namespace FlashcardApp.ViewModels
             else
                 await _subjectService.AddSubjectAsync(subject);
 
+            // Send message to reload subjects in the SubjectPage
+            MessagingCenter.Send(this, "ReloadSubjects");
+
             await Shell.Current.GoToAsync("///SubjectPage");
         }
     }
