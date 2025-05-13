@@ -7,6 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 using FlashcardApp.Services;
 using System.Windows.Input;
+using FlashcardApp.Views;
 
 namespace FlashcardApp.ViewModels
 {
@@ -50,7 +51,7 @@ namespace FlashcardApp.ViewModels
         public RegisterViewModel()
         {
             RegisterCommand = new Command(async () => await Register(), () => !IsBusy);
-            GoToLoginCommand = new Command(async () => await Shell.Current.GoToAsync("LoginPage"));
+            GoToLoginCommand = new Command(() => Application.Current.MainPage = new NavigationPage(new LoginPage()));
         }
 
         private async Task Register()
@@ -76,8 +77,10 @@ namespace FlashcardApp.ViewModels
                 var response = await authService.RegisterAsync(Email, Password);
                 await SecureStorage.SetAsync("firebase_token", response.idToken);
                 
-                await Shell.Current.GoToAsync("///MainPage");
-
+                ShowAlert?.Invoke("Success", "Registration successful! Please login with your new account.", "OK");
+                
+                // Replace current page with LoginPage to prevent navigating back
+                Application.Current.MainPage = new NavigationPage(new LoginPage());
             }
             catch (Exception ex)
             {

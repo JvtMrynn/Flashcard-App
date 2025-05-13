@@ -1,33 +1,73 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\Jovet\\source\\repos\\FlashcardApp\\",
+  "WorkspaceRootPath": "C:\\Users\\Jovet\\source\\repos\\Flashcard-App\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{1ABCDDD1-6D92-4467-A882-54F4999F6B25}|FlashcardApp.csproj|c:\\users\\jovet\\source\\repos\\flashcardapp\\viewmodels\\mainpageviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{1ABCDDD1-6D92-4467-A882-54F4999F6B25}|FlashcardApp.csproj|c:\\users\\jovet\\source\\repos\\flashcard-app\\services\\firebaseauthservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1ABCDDD1-6D92-4467-A882-54F4999F6B25}|FlashcardApp.csproj|solutionrelative:services\\firebaseauthservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1ABCDDD1-6D92-4467-A882-54F4999F6B25}|FlashcardApp.csproj|c:\\users\\jovet\\source\\repos\\flashcard-app\\viewmodels\\registerviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1ABCDDD1-6D92-4467-A882-54F4999F6B25}|FlashcardApp.csproj|solutionrelative:viewmodels\\registerviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1ABCDDD1-6D92-4467-A882-54F4999F6B25}|FlashcardApp.csproj|c:\\users\\jovet\\source\\repos\\flashcard-app\\viewmodels\\mainpageviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{1ABCDDD1-6D92-4467-A882-54F4999F6B25}|FlashcardApp.csproj|solutionrelative:viewmodels\\mainpageviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1ABCDDD1-6D92-4467-A882-54F4999F6B25}|FlashcardApp.csproj|c:\\users\\jovet\\source\\repos\\flashcardapp\\viewmodels\\subjectpageviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{1ABCDDD1-6D92-4467-A882-54F4999F6B25}|FlashcardApp.csproj|c:\\users\\jovet\\source\\repos\\flashcard-app\\viewmodels\\subjectpageviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{1ABCDDD1-6D92-4467-A882-54F4999F6B25}|FlashcardApp.csproj|solutionrelative:viewmodels\\subjectpageviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1ABCDDD1-6D92-4467-A882-54F4999F6B25}|FlashcardApp.csproj|c:\\users\\jovet\\source\\repos\\flashcardapp\\viewmodels\\flashcardpageviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1ABCDDD1-6D92-4467-A882-54F4999F6B25}|FlashcardApp.csproj|solutionrelative:viewmodels\\flashcardpageviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{1ABCDDD1-6D92-4467-A882-54F4999F6B25}|FlashcardApp.csproj|c:\\users\\jovet\\source\\repos\\flashcard-app\\appshell.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{1ABCDDD1-6D92-4467-A882-54F4999F6B25}|FlashcardApp.csproj|solutionrelative:appshell.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1ABCDDD1-6D92-4467-A882-54F4999F6B25}|FlashcardApp.csproj|c:\\users\\jovet\\source\\repos\\flashcardapp\\viewmodels\\subjecteditorpageviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{1ABCDDD1-6D92-4467-A882-54F4999F6B25}|FlashcardApp.csproj|c:\\users\\jovet\\source\\repos\\flashcard-app\\viewmodels\\subjecteditorpageviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{1ABCDDD1-6D92-4467-A882-54F4999F6B25}|FlashcardApp.csproj|solutionrelative:viewmodels\\subjecteditorpageviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1ABCDDD1-6D92-4467-A882-54F4999F6B25}|FlashcardApp.csproj|c:\\users\\jovet\\source\\repos\\flashcardapp\\mainpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "AbsoluteMoniker": "D:0:0:{1ABCDDD1-6D92-4467-A882-54F4999F6B25}|FlashcardApp.csproj|c:\\users\\jovet\\source\\repos\\flashcard-app\\viewmodels\\loginviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1ABCDDD1-6D92-4467-A882-54F4999F6B25}|FlashcardApp.csproj|solutionrelative:viewmodels\\loginviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1ABCDDD1-6D92-4467-A882-54F4999F6B25}|FlashcardApp.csproj|c:\\users\\jovet\\source\\repos\\flashcard-app\\app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1ABCDDD1-6D92-4467-A882-54F4999F6B25}|FlashcardApp.csproj|solutionrelative:app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1ABCDDD1-6D92-4467-A882-54F4999F6B25}|FlashcardApp.csproj|c:\\users\\jovet\\source\\repos\\flashcard-app\\views\\subjecteditorpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{1ABCDDD1-6D92-4467-A882-54F4999F6B25}|FlashcardApp.csproj|solutionrelative:views\\subjecteditorpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1ABCDDD1-6D92-4467-A882-54F4999F6B25}|FlashcardApp.csproj|c:\\users\\jovet\\source\\repos\\flashcard-app\\viewmodels\\flashcardeditorpageviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1ABCDDD1-6D92-4467-A882-54F4999F6B25}|FlashcardApp.csproj|solutionrelative:viewmodels\\flashcardeditorpageviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1ABCDDD1-6D92-4467-A882-54F4999F6B25}|FlashcardApp.csproj|c:\\users\\jovet\\source\\repos\\flashcard-app\\viewmodels\\flashcardpageviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1ABCDDD1-6D92-4467-A882-54F4999F6B25}|FlashcardApp.csproj|solutionrelative:viewmodels\\flashcardpageviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1ABCDDD1-6D92-4467-A882-54F4999F6B25}|FlashcardApp.csproj|c:\\users\\jovet\\source\\repos\\flashcard-app\\converters\\booltotitleconverter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1ABCDDD1-6D92-4467-A882-54F4999F6B25}|FlashcardApp.csproj|solutionrelative:converters\\booltotitleconverter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1ABCDDD1-6D92-4467-A882-54F4999F6B25}|FlashcardApp.csproj|c:\\users\\jovet\\source\\repos\\flashcard-app\\mainpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{1ABCDDD1-6D92-4467-A882-54F4999F6B25}|FlashcardApp.csproj|solutionrelative:mainpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1ABCDDD1-6D92-4467-A882-54F4999F6B25}|FlashcardApp.csproj|c:\\users\\jovet\\source\\repos\\flashcardapp\\views\\subjectpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{1ABCDDD1-6D92-4467-A882-54F4999F6B25}|FlashcardApp.csproj|c:\\users\\jovet\\source\\repos\\flashcard-app\\views\\loginpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1ABCDDD1-6D92-4467-A882-54F4999F6B25}|FlashcardApp.csproj|solutionrelative:views\\loginpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1ABCDDD1-6D92-4467-A882-54F4999F6B25}|FlashcardApp.csproj|c:\\users\\jovet\\source\\repos\\flashcard-app\\views\\loginpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{1ABCDDD1-6D92-4467-A882-54F4999F6B25}|FlashcardApp.csproj|solutionrelative:views\\loginpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1ABCDDD1-6D92-4467-A882-54F4999F6B25}|FlashcardApp.csproj|c:\\users\\jovet\\source\\repos\\flashcard-app\\views\\subjectpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{1ABCDDD1-6D92-4467-A882-54F4999F6B25}|FlashcardApp.csproj|solutionrelative:views\\subjectpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1ABCDDD1-6D92-4467-A882-54F4999F6B25}|FlashcardApp.csproj|c:\\users\\jovet\\source\\repos\\flashcardapp\\views\\subjectpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "AbsoluteMoniker": "D:0:0:{1ABCDDD1-6D92-4467-A882-54F4999F6B25}|FlashcardApp.csproj|c:\\users\\jovet\\source\\repos\\flashcard-app\\views\\subjectpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{1ABCDDD1-6D92-4467-A882-54F4999F6B25}|FlashcardApp.csproj|solutionrelative:views\\subjectpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     }
   ],
@@ -38,82 +78,214 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 10,
           "Children": [
             {
               "$type": "Bookmark",
-              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+              "Name": "ST:129:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
+              "Title": "AppShell.xaml",
+              "DocumentMoniker": "C:\\Users\\Jovet\\source\\repos\\Flashcard-App\\AppShell.xaml",
+              "RelativeDocumentMoniker": "AppShell.xaml",
+              "ToolTip": "C:\\Users\\Jovet\\source\\repos\\Flashcard-App\\AppShell.xaml",
+              "RelativeToolTip": "AppShell.xaml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-05-13T02:21:54.909Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "App.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\Jovet\\source\\repos\\Flashcard-App\\App.xaml.cs",
+              "RelativeDocumentMoniker": "App.xaml.cs",
+              "ToolTip": "C:\\Users\\Jovet\\source\\repos\\Flashcard-App\\App.xaml.cs",
+              "RelativeToolTip": "App.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-13T01:58:33.871Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "BoolToTitleConverter.cs",
+              "DocumentMoniker": "C:\\Users\\Jovet\\source\\repos\\Flashcard-App\\Converters\\BoolToTitleConverter.cs",
+              "RelativeDocumentMoniker": "Converters\\BoolToTitleConverter.cs",
+              "ToolTip": "C:\\Users\\Jovet\\source\\repos\\Flashcard-App\\Converters\\BoolToTitleConverter.cs",
+              "RelativeToolTip": "Converters\\BoolToTitleConverter.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-13T01:44:15.442Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "FlashcardEditorPageViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\Jovet\\source\\repos\\Flashcard-App\\ViewModels\\FlashcardEditorPageViewModel.cs",
+              "RelativeDocumentMoniker": "ViewModels\\FlashcardEditorPageViewModel.cs",
+              "ToolTip": "C:\\Users\\Jovet\\source\\repos\\Flashcard-App\\ViewModels\\FlashcardEditorPageViewModel.cs",
+              "RelativeToolTip": "ViewModels\\FlashcardEditorPageViewModel.cs",
+              "ViewState": "AgIAAHMAAAAAAAAAAAAUwIsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-13T01:16:28.684Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "SubjectEditorPage.xaml",
+              "DocumentMoniker": "C:\\Users\\Jovet\\source\\repos\\Flashcard-App\\Views\\SubjectEditorPage.xaml",
+              "RelativeDocumentMoniker": "Views\\SubjectEditorPage.xaml",
+              "ToolTip": "C:\\Users\\Jovet\\source\\repos\\Flashcard-App\\Views\\SubjectEditorPage.xaml",
+              "RelativeToolTip": "Views\\SubjectEditorPage.xaml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-05-13T01:22:13.658Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "RegisterViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\Jovet\\source\\repos\\Flashcard-App\\ViewModels\\RegisterViewModel.cs",
+              "RelativeDocumentMoniker": "ViewModels\\RegisterViewModel.cs",
+              "ToolTip": "C:\\Users\\Jovet\\source\\repos\\Flashcard-App\\ViewModels\\RegisterViewModel.cs",
+              "RelativeToolTip": "ViewModels\\RegisterViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAFIAAABTAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-13T01:00:35.945Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "LoginPage.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\Jovet\\source\\repos\\Flashcard-App\\Views\\LoginPage.xaml.cs",
+              "RelativeDocumentMoniker": "Views\\LoginPage.xaml.cs",
+              "ToolTip": "C:\\Users\\Jovet\\source\\repos\\Flashcard-App\\Views\\LoginPage.xaml.cs",
+              "RelativeToolTip": "Views\\LoginPage.xaml.cs",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAAwA8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-13T00:39:52.861Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "LoginViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\Jovet\\source\\repos\\Flashcard-App\\ViewModels\\LoginViewModel.cs",
+              "RelativeDocumentMoniker": "ViewModels\\LoginViewModel.cs",
+              "ToolTip": "C:\\Users\\Jovet\\source\\repos\\Flashcard-App\\ViewModels\\LoginViewModel.cs",
+              "RelativeToolTip": "ViewModels\\LoginViewModel.cs",
+              "ViewState": "AgIAADwAAAAAAAAAAADwv04AAABcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-13T00:32:58.2Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "LoginPage.xaml",
+              "DocumentMoniker": "C:\\Users\\Jovet\\source\\repos\\Flashcard-App\\Views\\LoginPage.xaml",
+              "RelativeDocumentMoniker": "Views\\LoginPage.xaml",
+              "ToolTip": "C:\\Users\\Jovet\\source\\repos\\Flashcard-App\\Views\\LoginPage.xaml",
+              "RelativeToolTip": "Views\\LoginPage.xaml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-05-13T00:32:53.776Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "FirebaseAuthService.cs",
+              "DocumentMoniker": "C:\\Users\\Jovet\\source\\repos\\Flashcard-App\\Services\\FirebaseAuthService.cs",
+              "RelativeDocumentMoniker": "Services\\FirebaseAuthService.cs",
+              "ToolTip": "C:\\Users\\Jovet\\source\\repos\\Flashcard-App\\Services\\FirebaseAuthService.cs",
+              "RelativeToolTip": "Services\\FirebaseAuthService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-28T15:08:54.499Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
               "Title": "FlashcardPageViewModel.cs",
-              "DocumentMoniker": "C:\\Users\\Jovet\\source\\repos\\FlashcardApp\\ViewModels\\FlashcardPageViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\Jovet\\source\\repos\\Flashcard-App\\ViewModels\\FlashcardPageViewModel.cs",
               "RelativeDocumentMoniker": "ViewModels\\FlashcardPageViewModel.cs",
-              "ToolTip": "C:\\Users\\Jovet\\source\\repos\\FlashcardApp\\ViewModels\\FlashcardPageViewModel.cs",
+              "ToolTip": "C:\\Users\\Jovet\\source\\repos\\Flashcard-App\\ViewModels\\FlashcardPageViewModel.cs",
               "RelativeToolTip": "ViewModels\\FlashcardPageViewModel.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAK0AAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAABkAAAAAAAAAAAAIwAwBAABLAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-28T14:47:41.748Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "MainPageViewModel.cs",
-              "DocumentMoniker": "C:\\Users\\Jovet\\source\\repos\\FlashcardApp\\ViewModels\\MainPageViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\Jovet\\source\\repos\\Flashcard-App\\ViewModels\\MainPageViewModel.cs",
               "RelativeDocumentMoniker": "ViewModels\\MainPageViewModel.cs",
-              "ToolTip": "C:\\Users\\Jovet\\source\\repos\\FlashcardApp\\ViewModels\\MainPageViewModel.cs",
+              "ToolTip": "C:\\Users\\Jovet\\source\\repos\\Flashcard-App\\ViewModels\\MainPageViewModel.cs",
               "RelativeToolTip": "ViewModels\\MainPageViewModel.cs",
-              "ViewState": "AgIAACEAAAAAAAAAAAAmwCcAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAFYAAAAAAAAAAAAYwFUAAABJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-28T14:45:29.981Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 12,
               "Title": "MainPage.xaml",
-              "DocumentMoniker": "C:\\Users\\Jovet\\source\\repos\\FlashcardApp\\MainPage.xaml",
+              "DocumentMoniker": "C:\\Users\\Jovet\\source\\repos\\Flashcard-App\\MainPage.xaml",
               "RelativeDocumentMoniker": "MainPage.xaml",
-              "ToolTip": "C:\\Users\\Jovet\\source\\repos\\FlashcardApp\\MainPage.xaml",
+              "ToolTip": "C:\\Users\\Jovet\\source\\repos\\Flashcard-App\\MainPage.xaml",
               "RelativeToolTip": "MainPage.xaml",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAADMAAAAAAAAAAAAAAEAAAABFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-04-28T14:45:25.31Z"
+              "WhenOpened": "2025-04-28T14:45:25.31Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "SubjectEditorPageViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\Jovet\\source\\repos\\Flashcard-App\\ViewModels\\SubjectEditorPageViewModel.cs",
+              "RelativeDocumentMoniker": "ViewModels\\SubjectEditorPageViewModel.cs",
+              "ToolTip": "C:\\Users\\Jovet\\source\\repos\\Flashcard-App\\ViewModels\\SubjectEditorPageViewModel.cs",
+              "RelativeToolTip": "ViewModels\\SubjectEditorPageViewModel.cs",
+              "ViewState": "AgIAAEYAAAAAAAAAAAAgwFcAAABFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-28T14:32:26.295Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "SubjectEditorPageViewModel.cs",
-              "DocumentMoniker": "C:\\Users\\Jovet\\source\\repos\\FlashcardApp\\ViewModels\\SubjectEditorPageViewModel.cs",
-              "RelativeDocumentMoniker": "ViewModels\\SubjectEditorPageViewModel.cs",
-              "ToolTip": "C:\\Users\\Jovet\\source\\repos\\FlashcardApp\\ViewModels\\SubjectEditorPageViewModel.cs",
-              "RelativeToolTip": "ViewModels\\SubjectEditorPageViewModel.cs",
-              "ViewState": "AgIAAEsAAAAAAAAAAAAgwFgAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-28T14:32:26.295Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
               "Title": "SubjectPageViewModel.cs",
-              "DocumentMoniker": "C:\\Users\\Jovet\\source\\repos\\FlashcardApp\\ViewModels\\SubjectPageViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\Jovet\\source\\repos\\Flashcard-App\\ViewModels\\SubjectPageViewModel.cs",
               "RelativeDocumentMoniker": "ViewModels\\SubjectPageViewModel.cs",
-              "ToolTip": "C:\\Users\\Jovet\\source\\repos\\FlashcardApp\\ViewModels\\SubjectPageViewModel.cs",
+              "ToolTip": "C:\\Users\\Jovet\\source\\repos\\Flashcard-App\\ViewModels\\SubjectPageViewModel.cs",
               "RelativeToolTip": "ViewModels\\SubjectPageViewModel.cs",
-              "ViewState": "AgIAACQAAAAAAAAAAAAwwDEAAAAbAAAAAAAAAA==",
+              "ViewState": "AgIAAIgAAAAAAAAAAADgv5sAAABLAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-28T14:17:35.327Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 15,
               "Title": "SubjectPage.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\Jovet\\source\\repos\\FlashcardApp\\Views\\SubjectPage.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\Jovet\\source\\repos\\Flashcard-App\\Views\\SubjectPage.xaml.cs",
               "RelativeDocumentMoniker": "Views\\SubjectPage.xaml.cs",
-              "ToolTip": "C:\\Users\\Jovet\\source\\repos\\FlashcardApp\\Views\\SubjectPage.xaml.cs",
+              "ToolTip": "C:\\Users\\Jovet\\source\\repos\\Flashcard-App\\Views\\SubjectPage.xaml.cs",
               "RelativeToolTip": "Views\\SubjectPage.xaml.cs",
               "ViewState": "AgIAAAUAAAAAAAAAAAAAwBQAAAALAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -121,11 +293,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 16,
               "Title": "SubjectPage.xaml",
-              "DocumentMoniker": "C:\\Users\\Jovet\\source\\repos\\FlashcardApp\\Views\\SubjectPage.xaml",
+              "DocumentMoniker": "C:\\Users\\Jovet\\source\\repos\\Flashcard-App\\Views\\SubjectPage.xaml",
               "RelativeDocumentMoniker": "Views\\SubjectPage.xaml",
-              "ToolTip": "C:\\Users\\Jovet\\source\\repos\\FlashcardApp\\Views\\SubjectPage.xaml",
+              "ToolTip": "C:\\Users\\Jovet\\source\\repos\\Flashcard-App\\Views\\SubjectPage.xaml",
               "RelativeToolTip": "Views\\SubjectPage.xaml",
               "ViewState": "AgIAAFEAAAAAAAAAAAAAAFAAAAAfAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",

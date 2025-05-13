@@ -15,7 +15,7 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = FlashcardApp
-build_property.ProjectDir = C:\Users\Jovet\source\repos\FlashcardApp\
+build_property.ProjectDir = C:\Users\Jovet\source\repos\Flashcard-App\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.CsWinRTAotExportsEnabled = 
@@ -27,67 +27,67 @@ build_property.CsWinRTUseWindowsUIXamlProjections = false
 build_property.EffectiveAnalysisLevelStyle = 9.0
 build_property.EnableCodeStyleSeverity = 
 
-[C:/Users/Jovet/source/repos/FlashcardApp/App.xaml]
+[C:/Users/Jovet/source/repos/Flashcard-App/App.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = FlashcardApp.App.xaml
 build_metadata.AdditionalFiles.TargetPath = App.xaml
 build_metadata.AdditionalFiles.RelativePath = App.xaml
 
-[C:/Users/Jovet/source/repos/FlashcardApp/AppShell.xaml]
+[C:/Users/Jovet/source/repos/Flashcard-App/AppShell.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = FlashcardApp.AppShell.xaml
 build_metadata.AdditionalFiles.TargetPath = AppShell.xaml
 build_metadata.AdditionalFiles.RelativePath = AppShell.xaml
 
-[C:/Users/Jovet/source/repos/FlashcardApp/MainPage.xaml]
+[C:/Users/Jovet/source/repos/Flashcard-App/MainPage.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = FlashcardApp.MainPage.xaml
 build_metadata.AdditionalFiles.TargetPath = MainPage.xaml
 build_metadata.AdditionalFiles.RelativePath = MainPage.xaml
 
-[C:/Users/Jovet/source/repos/FlashcardApp/Resources/Styles/Colors.xaml]
+[C:/Users/Jovet/source/repos/Flashcard-App/Resources/Styles/Colors.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = FlashcardApp.Resources.Styles.Colors.xaml
 build_metadata.AdditionalFiles.TargetPath = Resources\Styles\Colors.xaml
 build_metadata.AdditionalFiles.RelativePath = Resources\Styles\Colors.xaml
 
-[C:/Users/Jovet/source/repos/FlashcardApp/Resources/Styles/Styles.xaml]
+[C:/Users/Jovet/source/repos/Flashcard-App/Resources/Styles/Styles.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = FlashcardApp.Resources.Styles.Styles.xaml
 build_metadata.AdditionalFiles.TargetPath = Resources\Styles\Styles.xaml
 build_metadata.AdditionalFiles.RelativePath = Resources\Styles\Styles.xaml
 
-[C:/Users/Jovet/source/repos/FlashcardApp/Views/FlashcardEditorPage.xaml]
+[C:/Users/Jovet/source/repos/Flashcard-App/Views/FlashcardEditorPage.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = FlashcardApp.Views.FlashcardEditorPage.xaml
 build_metadata.AdditionalFiles.TargetPath = Views\FlashcardEditorPage.xaml
 build_metadata.AdditionalFiles.RelativePath = Views\FlashcardEditorPage.xaml
 
-[C:/Users/Jovet/source/repos/FlashcardApp/Views/FlashcardPage.xaml]
+[C:/Users/Jovet/source/repos/Flashcard-App/Views/FlashcardPage.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = FlashcardApp.Views.FlashcardPage.xaml
 build_metadata.AdditionalFiles.TargetPath = Views\FlashcardPage.xaml
 build_metadata.AdditionalFiles.RelativePath = Views\FlashcardPage.xaml
 
-[C:/Users/Jovet/source/repos/FlashcardApp/Views/LoginPage.xaml]
+[C:/Users/Jovet/source/repos/Flashcard-App/Views/LoginPage.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = FlashcardApp.Views.LoginPage.xaml
 build_metadata.AdditionalFiles.TargetPath = Views\LoginPage.xaml
 build_metadata.AdditionalFiles.RelativePath = Views\LoginPage.xaml
 
-[C:/Users/Jovet/source/repos/FlashcardApp/Views/RegisterPage.xaml]
+[C:/Users/Jovet/source/repos/Flashcard-App/Views/RegisterPage.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = FlashcardApp.Views.RegisterPage.xaml
 build_metadata.AdditionalFiles.TargetPath = Views\RegisterPage.xaml
 build_metadata.AdditionalFiles.RelativePath = Views\RegisterPage.xaml
 
-[C:/Users/Jovet/source/repos/FlashcardApp/Views/SubjectEditorPage.xaml]
+[C:/Users/Jovet/source/repos/Flashcard-App/Views/SubjectEditorPage.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = FlashcardApp.Views.SubjectEditorPage.xaml
 build_metadata.AdditionalFiles.TargetPath = Views\SubjectEditorPage.xaml
 build_metadata.AdditionalFiles.RelativePath = Views\SubjectEditorPage.xaml
 
-[C:/Users/Jovet/source/repos/FlashcardApp/Views/SubjectPage.xaml]
+[C:/Users/Jovet/source/repos/Flashcard-App/Views/SubjectPage.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = FlashcardApp.Views.SubjectPage.xaml
 build_metadata.AdditionalFiles.TargetPath = Views\SubjectPage.xaml

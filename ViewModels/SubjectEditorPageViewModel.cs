@@ -11,6 +11,7 @@ using CommunityToolkit.Mvvm.Input;
 using FlashcardApp.Services;
 using FlashcardApp.Models;
 using FlashcardApp.ViewModels;
+using FlashcardApp.Views;
 
 namespace FlashcardApp.ViewModels
 {
@@ -34,7 +35,7 @@ namespace FlashcardApp.ViewModels
         {
             _subjectService = new SubjectService();
             SaveCommand = new Command(async () => await SaveSubject());
-            CancelCommand = new Command(async () => await Shell.Current.GoToAsync("///SubjectPage"));
+            CancelCommand = new Command(async () => await Application.Current.MainPage.Navigation.PopAsync());
         }
 
         partial void OnSubjectIdChanged(int value)
@@ -84,7 +85,7 @@ namespace FlashcardApp.ViewModels
             // Send message to reload subjects in the SubjectPage
             MessagingCenter.Send(this, "ReloadSubjects");
 
-            await Shell.Current.GoToAsync("///SubjectPage");
+            await Application.Current.MainPage.Navigation.PopAsync();
         }
     }
 }

@@ -4,22 +4,28 @@ namespace FlashcardApp.Views;
 
 public partial class FlashcardEditorPage : ContentPage
 {
+	private FlashcardEditorPageViewModel _viewModel;
+
 	public FlashcardEditorPage()
 	{
 		InitializeComponent();
-		BindingContext = new FlashcardEditorPageViewModel();
+		
+		_viewModel = new FlashcardEditorPageViewModel();
+		_viewModel.ShowAlert = async (title, message, cancel) =>
+		{
+			await DisplayAlert(title, message, cancel);
+		};
+		
+		BindingContext = _viewModel;
 	}
 
     protected override void OnAppearing()
     {
         base.OnAppearing();
 
-        if (BindingContext is FlashcardEditorPageViewModel vm)
+        if (_viewModel.FlashcardId == 0)
         {
-            if (vm.FlashcardId == 0)
-            {
-                vm.PrepareNewFlashcard();
-            }
+            _viewModel.PrepareNewFlashcard();
         }
     }
 }

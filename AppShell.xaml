@@ -27,13 +27,13 @@
         <ShellContent Route="SubjectPage" ContentTemplate="{DataTemplate views:SubjectPage}"/>
     </FlyoutItem>
 
-    <ShellContent Title="Edit Subject" Route="SubjectEditorPage" ContentTemplate="{DataTemplate views:SubjectEditorPage}"/>
+    <ShellContent x:Name="SubjectEditorShellContent" Title="Edit Subject" Route="SubjectEditorPage" ContentTemplate="{DataTemplate views:SubjectEditorPage}" FlyoutItemIsVisible="False"/>
 
     <!-- Flashcard Pages -->
     <FlyoutItem x:Name="FlashcardFlyoutItem" Route="flashcard" Title="Flashcard">
         <ShellContent Route="FlashcardPage" ContentTemplate="{DataTemplate views:FlashcardPage}"/>
     </FlyoutItem>
 
-    <ShellContent Title="Edit Flashcard" Route="FlashcardEditorPage" ContentTemplate="{DataTemplate views:FlashcardEditorPage}"/>
+    <ShellContent x:Name="FlashcardEditorShellContent" Title="Edit Flashcard" Route="FlashcardEditorPage" ContentTemplate="{DataTemplate views:FlashcardEditorPage}" FlyoutItemIsVisible="False"/>
 
 </Shell>

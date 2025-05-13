@@ -37,7 +37,6 @@ namespace FlashcardApp.ViewModels
         }
 
         public ICommand LoginCommand { get; }
-
         public ICommand GoToRegisterCommand { get; }
         public Action<string, string, string> ShowAlert { get; set; }
 
@@ -46,7 +45,7 @@ namespace FlashcardApp.ViewModels
         public LoginViewModel()
         {
             LoginCommand = new Command(async () => await Login(), () => !IsBusy);
-            GoToRegisterCommand = new Command(async () => await Shell.Current.GoToAsync("RegisterPage"));
+            GoToRegisterCommand = new Command(async () => await Application.Current.MainPage.Navigation.PushAsync(new RegisterPage()));
         }
 
         private async Task Login()
@@ -65,16 +64,15 @@ namespace FlashcardApp.ViewModels
 
                 var response = await authService.LoginAsync(Email, Password);
                 await SecureStorage.SetAsync("firebase_token", response.idToken);
+
+                // Set up a new AppShell as the MainPage to reset navigation stack
+                var appShell = new AppShell();
+                appShell.ShowMainContent();
+                appShell.HideAuthPages();
                 
-
-                // Update UI after successful login
-                if (Application.Current.MainPage is AppShell appShell)
-                {
-                    appShell.ShowMainContent();
-                    appShell.HideAuthPages();
-                }
-
-                await Shell.Current.GoToAsync("///MainPage"); // Navigates and clears backstack
+                // Set the AppShell as MainPage with a MainPage in its navigation
+                Application.Current.MainPage = appShell;
+                await appShell.GoToAsync("//MainPage");
             }
             catch (Exception ex)
             {

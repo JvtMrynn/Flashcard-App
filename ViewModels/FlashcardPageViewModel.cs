@@ -7,6 +7,7 @@ using System.Windows.Input;
 using CommunityToolkit.Mvvm.ComponentModel;
 using FlashcardApp.Models;
 using FlashcardApp.Services;
+using FlashcardApp.Views;
 
 namespace FlashcardApp.ViewModels
 {
@@ -55,20 +56,51 @@ namespace FlashcardApp.ViewModels
             LoadFlashcards();
         }
 
-        
-
         partial void OnSubjectIdChanged(int value)
         {
             LoadFlashcards();
         }
 
-        private async void LoadFlashcards()
+        public async void LoadFlashcards(int? scrollToFlashcardId = null)
         {
             var cards = await _flashcardService.GetFlashcardsBySubjectIdAsync(SubjectId);
             Flashcards = cards.ToList();
-            CurrentIndex = 0;  // Use the property instead of the field
-            Score = 0; // reset score
+            
+            // If there are no cards, just reset everything
+            if (Flashcards.Count == 0)
+            {
+                CurrentIndex = 0;
+                Score = 0;
+                TotalFlashcards = 0;
+                CurrentFlashcard = null;
+                ProgressText = "No Cards";
+                return;
+            }
+            
+            // Set the total count
             TotalFlashcards = Flashcards.Count;
+            
+            // If we need to scroll to a specific flashcard, find its index
+            if (scrollToFlashcardId.HasValue)
+            {
+                var index = Flashcards.FindIndex(f => f.Id == scrollToFlashcardId.Value);
+                if (index >= 0)
+                {
+                    CurrentIndex = index;
+                }
+                else
+                {
+                    // If the specific card wasn't found, go to the last card (likely the newly added one)
+                    CurrentIndex = Flashcards.Count - 1;
+                }
+            }
+            else
+            {
+                // Default to first card
+                CurrentIndex = 0;
+                Score = 0;
+            }
+            
             UpdateCurrentCard();
         }
 
@@ -81,13 +113,11 @@ namespace FlashcardApp.ViewModels
                 return;
             }
 
-            // Make sure we have a valid index
             if (CurrentIndex < 0 || CurrentIndex >= Flashcards.Count)
             {
                 CurrentIndex = 0;
             }
 
-            // Use the property instead of the field
             CurrentFlashcard = Flashcards[CurrentIndex];
             ProgressText = $"Card {CurrentIndex + 1}/{Flashcards.Count}";
         }
@@ -97,7 +127,6 @@ namespace FlashcardApp.ViewModels
             if (Flashcards == null || Flashcards.Count == 0)
                 return;
 
-            // Use the property instead of the field
             CurrentIndex = (CurrentIndex + 1) % Flashcards.Count;
             UpdateCurrentCard();
         }
@@ -107,7 +136,6 @@ namespace FlashcardApp.ViewModels
             if (Flashcards == null || Flashcards.Count == 0)
                 return;
 
-            // Use the property instead of the field
             CurrentIndex = (CurrentIndex - 1 + Flashcards.Count) % Flashcards.Count;
             UpdateCurrentCard();
         }
@@ -118,12 +146,12 @@ namespace FlashcardApp.ViewModels
                 return;
 
             if (IsShuffled)
-                Flashcards = Flashcards.OrderBy(f => f.Id).ToList(); // Restore original order
+                Flashcards = Flashcards.OrderBy(f => f.Id).ToList();
             else
-                Flashcards = Flashcards.OrderBy(_ => Guid.NewGuid()).ToList(); // Shuffle
+                Flashcards = Flashcards.OrderBy(_ => Guid.NewGuid()).ToList();
 
             IsShuffled = !IsShuffled;
-            CurrentIndex = 0;  // Use the property instead of the field
+            CurrentIndex = 0;
             UpdateCurrentCard();
         }
 
@@ -162,13 +190,12 @@ namespace FlashcardApp.ViewModels
             }
             else
             {
-                // No more flashcards, show the final score
                 await Application.Current.MainPage.DisplayAlert(
                     "Quiz Completed",
                     $"You scored {Score} out of {Flashcards.Count}!",
                     "OK");
 
-                await Shell.Current.GoToAsync("///SubjectPage"); // Go back to Dashboard or wherever you want
+                await Application.Current.MainPage.Navigation.PopAsync();
             }
         }
 
@@ -184,7 +211,17 @@ namespace FlashcardApp.ViewModels
 
         private async Task AddFlashcard()
         {
-            await Shell.Current.GoToAsync($"///FlashcardEditorPage?subjectId={SubjectId}&flashcardId=0");
+            var editorPage = new FlashcardEditorPage();
+            if (editorPage.BindingContext is FlashcardEditorPageViewModel vm)
+            {
+                vm.SubjectId = SubjectId;
+                vm.FlashcardId = 0;
+                vm.OnFlashcardSaved = (newId) => {
+                    Console.WriteLine($"Flashcard saved with ID: {newId}");
+                    LoadFlashcards(newId);
+                };
+            }
+            await Application.Current.MainPage.Navigation.PushAsync(editorPage);
         }
 
         private async Task EditCurrentFlashcard()
@@ -192,9 +229,18 @@ namespace FlashcardApp.ViewModels
             if (CurrentFlashcard == null)
                 return;
 
-            await Shell.Current.GoToAsync($"///FlashcardEditorPage?flashcardId={CurrentFlashcard.Id}&subjectId={SubjectId}");
+            var editorPage = new FlashcardEditorPage();
+            if (editorPage.BindingContext is FlashcardEditorPageViewModel vm)
+            {
+                vm.SubjectId = SubjectId;
+                vm.FlashcardId = CurrentFlashcard.Id;
+                vm.OnFlashcardSaved = (updatedId) => {
+                    Console.WriteLine($"Flashcard updated with ID: {updatedId}");
+                    LoadFlashcards(updatedId);
+                };
+            }
+            await Application.Current.MainPage.Navigation.PushAsync(editorPage);
         }
-
 
         private async Task DeleteCurrentFlashcard()
         {
@@ -209,7 +255,7 @@ namespace FlashcardApp.ViewModels
             if (confirm)
             {
                 await _flashcardService.DeleteFlashcardByIdAsync(CurrentFlashcard.Id);
-                Flashcards.RemoveAt(CurrentIndex);  // Use the property instead of the field
+                Flashcards.RemoveAt(CurrentIndex);
 
                 if (CurrentIndex >= Flashcards.Count)
                     CurrentIndex = Math.Max(0, Flashcards.Count - 1);
@@ -218,22 +264,14 @@ namespace FlashcardApp.ViewModels
             }
         }
 
-        public async void ReloadFlashcards()
-        {
-            var cards = await _flashcardService.GetFlashcardsBySubjectIdAsync(SubjectId);
-            Flashcards = cards.ToList();
-            CurrentIndex = 0;
-            UpdateCurrentCard();
-        }
-
         private async Task GoToDashboard()
         {
-            await Shell.Current.GoToAsync("///MainPage");
+            await Application.Current.MainPage.Navigation.PopToRootAsync();
         }
 
         private async Task GoToSubjects()
         {
-            await Shell.Current.GoToAsync("///SubjectPage");
+            await Application.Current.MainPage.Navigation.PopAsync();
         }
     }
 }

@@ -9,7 +9,8 @@
 
         protected override Window CreateWindow(IActivationState? activationState)
         {
-            return new Window(new AppShell());
+            var navigationPage = new NavigationPage(new AppShell());
+            return new Window(navigationPage);
         }
 
         protected override async void OnStart()

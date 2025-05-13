@@ -2,9 +2,11 @@
 <Application xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:FlashcardApp"
+             xmlns:converters="clr-namespace:FlashcardApp.Converters"
              x:Class="FlashcardApp.App">
     <Application.Resources>
         <ResourceDictionary>
+            <converters:BoolToTitleConverter x:Key="BoolToTitleConverter" />
             <ResourceDictionary.MergedDictionaries>
                 <ResourceDictionary Source="Resources/Styles/Colors.xaml" />
                 <ResourceDictionary Source="Resources/Styles/Styles.xaml" />

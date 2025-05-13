@@ -24,7 +24,6 @@ namespace FlashcardApp.ViewModels
 
         public ICommand GoToSubjectCommand { get; }
         public ICommand AddSubjectCommand { get; }
-
         public ICommand LogoutCommand { get; }
         public Action<string, string, string> ShowAlert { get; set; }
 
@@ -33,12 +32,11 @@ namespace FlashcardApp.ViewModels
             _subjectService = new SubjectService();
             GoToSubjectCommand = new Command<SubjectModel>(async (subject) => await NavigateToSubjectPage(subject));
             AddSubjectCommand = new Command(async () => await NavigateToSubjectEditorPage());
+            LogoutCommand = new Command(async () => await Logout());
 
             LoadSubjects();
 
             MessagingCenter.Subscribe<SubjectEditorPageViewModel>(this, "ReloadSubjects", (sender) => LoadSubjects());
-
-            LogoutCommand = new Command(async () => await Logout());
         }
 
         private async void LoadSubjects()
@@ -56,12 +54,17 @@ namespace FlashcardApp.ViewModels
 
         private async Task NavigateToSubjectPage(SubjectModel subject)
         {
-            await Shell.Current.GoToAsync($"///SubjectPage?subjectId={subject.Id}");
+            var subjectPage = new SubjectPage();
+            if (subjectPage.BindingContext is SubjectPageViewModel vm)
+            {
+                vm.SubjectId = subject.Id;
+            }
+            await Application.Current.MainPage.Navigation.PushAsync(subjectPage);
         }
 
         private async Task NavigateToSubjectEditorPage()
         {
-            await Shell.Current.GoToAsync("SubjectEditorPage");
+            await Application.Current.MainPage.Navigation.PushAsync(new SubjectEditorPage());
         }
 
         private async Task Logout()
@@ -74,17 +77,20 @@ namespace FlashcardApp.ViewModels
 
             SecureStorage.Remove("firebase_token");
 
-            if (Shell.Current is AppShell appShell)
+            if (Application.Current.MainPage is AppShell appShell)
             {
                 appShell.ShowAuthPages();
                 appShell.HideMainContent();
+                
+                // Instead of pushing to navigation stack, set a new navigation page with LoginPage
+                // This prevents navigation back to MainPage after logout
             }
             else
             {
-                Console.WriteLine("Warning: Shell.Current is not the expected AppShell type.");
+                Console.WriteLine("Warning: MainPage is not the expected AppShell type.");
             }
 
-            await Shell.Current.GoToAsync("///LoginPage");
+            Application.Current.MainPage = new NavigationPage(new LoginPage());
         }
 
         public event PropertyChangedEventHandler PropertyChanged;

@@ -9,15 +9,23 @@ using FlashcardApp.Models;
 using System.Windows.Input;
 using CommunityToolkit.Mvvm.ComponentModel;
 using System.Diagnostics;
+using FlashcardApp.Views;
 
 namespace FlashcardApp.ViewModels
 {
+    [QueryProperty(nameof(SubjectId), "subjectId")]
     public class SubjectPageViewModel : ObservableObject
     {
         private readonly SubjectService _subjectService;
+        
+        private int _subjectId;
+        public int SubjectId
+        {
+            get => _subjectId;
+            set => SetProperty(ref _subjectId, value);
+        }
 
         public ObservableCollection<SubjectModel> Subjects { get; set; } = new();
-
 
         private string _searchText;
         public string SearchText
@@ -87,11 +95,27 @@ namespace FlashcardApp.ViewModels
 
         private async Task GoToEditorPage(SubjectModel subject = null)
         {
-            string route = subject == null 
-                ? "SubjectEditorPage" 
-                : $"SubjectEditorPage?subjectId={subject.Id}";
-
-            await Shell.Current.GoToAsync(route);
+            try
+            {
+                var editorPage = new SubjectEditorPage();
+                await Application.Current.MainPage.Navigation.PushAsync(editorPage);
+                
+                if (editorPage.BindingContext is SubjectEditorPageViewModel vm)
+                {
+                    if (subject != null)
+                    {
+                        vm.SubjectId = subject.Id;
+                    }
+                    vm.ShowAlert = async (title, message, cancel) =>
+                    {
+                        await Application.Current.MainPage.DisplayAlert(title, message, cancel);
+                    };
+                }
+            }
+            catch (Exception ex)
+            {
+                await Application.Current.MainPage.DisplayAlert("Error", "Failed to open editor: " + ex.Message, "OK");
+            }
         }
 
         private async Task DeleteSubject(SubjectModel subject)
@@ -119,13 +143,17 @@ namespace FlashcardApp.ViewModels
 
         private async Task GoToFlashcardPage(SubjectModel subject)
         {
-            await Shell.Current.GoToAsync($"FlashcardPage?subjectId={subject.Id}");
+            var flashcardPage = new FlashcardPage();
+            if (flashcardPage.BindingContext is FlashcardPageViewModel vm)
+            {
+                vm.SubjectId = subject.Id;
+            }
+            await Application.Current.MainPage.Navigation.PushAsync(flashcardPage);
         }
 
         private async Task GoToDashboard()
         {
-            await Shell.Current.GoToAsync("///MainPage");
+            await Application.Current.MainPage.Navigation.PopToRootAsync();
         }
-
     }
 }

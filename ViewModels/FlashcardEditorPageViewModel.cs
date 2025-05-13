@@ -8,6 +8,7 @@ using CommunityToolkit.Mvvm.ComponentModel;
 using Microsoft.Maui.Controls;
 using FlashcardApp.Models;
 using FlashcardApp.Services;
+using FlashcardApp.Views;
 
 namespace FlashcardApp.ViewModels
 {
@@ -31,13 +32,18 @@ namespace FlashcardApp.ViewModels
         public ICommand SaveCommand { get; }
         public ICommand CancelCommand { get; }
         public ICommand SetCorrectAnswerCommand { get; }
+        
+        // Callback to notify parent page when a flashcard is added/updated
+        public Action<int> OnFlashcardSaved { get; set; }
+        
+        public Action<string, string, string> ShowAlert { get; set; }
 
         public FlashcardEditorPageViewModel()
         {
             _flashcardService = new FlashcardService();
 
             SaveCommand = new Command(async () => await SaveFlashcard());
-            CancelCommand = new Command(async () => await Shell.Current.GoToAsync($"///FlashcardPage?subjectId={SubjectId}"));
+            CancelCommand = new Command(async () => await Application.Current.MainPage.Navigation.PopAsync());
             SetCorrectAnswerCommand = new Command<string>(SetCorrectAnswer);
         }
 
@@ -96,7 +102,7 @@ namespace FlashcardApp.ViewModels
         {
             if (string.IsNullOrWhiteSpace(Definition) || string.IsNullOrWhiteSpace(CorrectAnswer))
             {
-                await Shell.Current.DisplayAlert("Error", "Please enter a definition and select the correct answer.", "OK");
+                await Application.Current.MainPage.DisplayAlert("Error", "Please enter a definition and select the correct answer.", "OK");
                 return;
             }
 
@@ -112,12 +118,24 @@ namespace FlashcardApp.ViewModels
                 CorrectAnswer = CorrectAnswer
             };
 
+            int flashcardId;
             if (IsEditMode)
+            {
                 await _flashcardService.UpdateFlashcardAsync(flashcard);
+                flashcardId = flashcard.Id;
+            }
             else
-                await _flashcardService.AddFlashcardAsync(flashcard);
+            {
+                flashcardId = await _flashcardService.AddFlashcardAsync(flashcard);
+            }
 
-            await Shell.Current.GoToAsync($"///FlashcardPage?subjectId={SubjectId}");
+            // Notify the parent page about the saved flashcard
+            OnFlashcardSaved?.Invoke(flashcardId);
+
+            // Also send the message through MessagingCenter for backward compatibility
+            MessagingCenter.Send(this, "ReloadFlashcards", flashcardId);
+
+            await Application.Current.MainPage.Navigation.PopAsync();
         }
 
         public void PrepareNewFlashcard()
@@ -125,6 +143,5 @@ namespace FlashcardApp.ViewModels
             ClearFields();
             IsEditMode = false;
         }
-
     }
 }
