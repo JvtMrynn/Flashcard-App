@@ -153,7 +153,18 @@ namespace FlashcardApp.ViewModels
 
         private async Task GoToDashboard()
         {
-            await Application.Current.MainPage.Navigation.PopToRootAsync();
+            try
+            {
+                // Create a new navigation page with MainPage as root
+                var newMainPage = new NavigationPage(new MainPage());
+                Application.Current.MainPage = newMainPage;
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine($"Navigation error: {ex.Message}");
+                await Application.Current.MainPage.DisplayAlert("Navigation Error", 
+                    "Unable to navigate to dashboard. Please try again.", "OK");
+            }
         }
     }
 }

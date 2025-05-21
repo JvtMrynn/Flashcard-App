@@ -16,7 +16,14 @@ namespace FlashcardApp
                 });
 
 #if DEBUG
-    		builder.Logging.AddDebug();
+            builder.Logging.AddDebug()
+                .SetMinimumLevel(LogLevel.Trace);
+            
+            builder.Services.AddLogging(loggingBuilder =>
+            {
+                loggingBuilder.AddDebug();
+                loggingBuilder.SetMinimumLevel(LogLevel.Trace);
+            });
 #endif
 
             return builder.Build();
